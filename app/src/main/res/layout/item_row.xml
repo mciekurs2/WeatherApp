@@ -33,14 +33,16 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/infoTitle"
-            android:textSize="25sp" />
+            android:textSize="25sp"
+            android:textColor="#e6e6e6"/>
 
         <TextView
             android:id="@+id/textView_text"
             android:textSize="15sp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/infoText" />
+            android:text="@string/infoText"
+            android:textColor="#e6e6e6"/>
 
 
     </LinearLayout>
@@ -60,7 +62,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/infoTitle"
-            android:textSize="15sp" />
+            android:textSize="15sp"
+            android:textColor="#e6e6e6"/>
 
 
     </LinearLayout>
