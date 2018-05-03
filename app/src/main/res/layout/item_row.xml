@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="2dp"
-    android:background="#1dffffff"
+    android:background="#0effffff"
     android:orientation="horizontal">
 
 
@@ -34,7 +34,7 @@
             android:layout_height="wrap_content"
             android:text="@string/infoTitle"
             android:gravity="start"
-            android:textColor="#e6e6e6"
+            android:textColor="#c4ffffff"
             android:textSize="25sp" />
 
         <TextView
@@ -43,7 +43,7 @@
             android:layout_height="wrap_content"
             android:text="@string/infoText"
             android:gravity="start"
-            android:textColor="#e6e6e6"
+            android:textColor="#c4ffffff"
             android:textSize="15sp" />
 
 
@@ -65,7 +65,7 @@
             android:layout_height="wrap_content"
             android:text="@string/infoTitle"
             android:gravity="end"
-            android:textColor="#e6e6e6"
+            android:textColor="#c4ffffff"
             android:textSize="15sp" />
 
 
