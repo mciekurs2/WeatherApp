@@ -10,18 +10,12 @@ import kotlinx.android.synthetic.main.item_row.view.*
 import java.text.SimpleDateFormat
 import java.util.*
 
-
-class MainAdapter (val homeFeed: HomeFeed): RecyclerView.Adapter<CustomViewHolder>() {
-
-    //number of items
-    override fun getItemCount(): Int {
-        return  homeFeed.list.count()
-    }
+class MainAdapter (private val homeFeed: HomeFeed): RecyclerView.Adapter<CustomViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CustomViewHolder {
-        val layoutInflater = LayoutInflater.from(parent.context)
-        val cellForRow = layoutInflater.inflate(R.layout.item_row, parent, false)
-        return CustomViewHolder(cellForRow)
+        val itemView = LayoutInflater.from(parent.context)
+                .inflate(R.layout.item_row, parent, false)
+        return CustomViewHolder(itemView)
     }
 
     @SuppressLint("SetTextI18n")
@@ -32,18 +26,22 @@ class MainAdapter (val homeFeed: HomeFeed): RecyclerView.Adapter<CustomViewHolde
         holder.view.textView_text.text = weather.main.humidity + "%"
 
 
+        //can get days by calling temp.day
         val temp = SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.getDefault()).parse(weather.dt_txt)
-        val sdf = SimpleDateFormat("HH:mm", Locale.getDefault()).format(temp)
+        val sdf = SimpleDateFormat("EEEE HH:mm", Locale.getDefault()).format(temp)
 
         holder.view.textView_time.text = sdf
 
+        //gets weather icon img
         val weatherIconImageView = holder.view.imageView_weatherIcon
         val iconURL = "http://openweathermap.org/img/w/" + weather.weather[0].icon +".png"
         Picasso.get().load(iconURL).resize(150, 150).centerCrop().into(weatherIconImageView)
 
 
-
     }
+
+    //number of items
+    override fun getItemCount() = homeFeed.list.count()
 
 }
 

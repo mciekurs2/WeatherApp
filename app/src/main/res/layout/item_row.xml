@@ -33,16 +33,18 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/infoTitle"
-            android:textSize="25sp"
-            android:textColor="#e6e6e6"/>
+            android:gravity="start"
+            android:textColor="#e6e6e6"
+            android:textSize="25sp" />
 
         <TextView
             android:id="@+id/textView_text"
-            android:textSize="15sp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/infoText"
-            android:textColor="#e6e6e6"/>
+            android:gravity="start"
+            android:textColor="#e6e6e6"
+            android:textSize="15sp" />
 
 
     </LinearLayout>
@@ -62,8 +64,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/infoTitle"
-            android:textSize="15sp"
-            android:textColor="#e6e6e6"/>
+            android:gravity="end"
+            android:textColor="#e6e6e6"
+            android:textSize="15sp" />
 
 
     </LinearLayout>
