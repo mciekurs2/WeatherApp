@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.item_row.view.*
+import java.text.DecimalFormat
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -22,7 +23,11 @@ class MainAdapter (private val homeFeed: HomeFeed): RecyclerView.Adapter<CustomV
     override fun onBindViewHolder(holder: CustomViewHolder, position: Int) {
         //val titles = titles[position]
         val weather = homeFeed.list[position]
-        holder.view.textView_title.text = weather.main.temp + "°C"
+
+        val value = weather.main.temp.toDouble()
+        val df = DecimalFormat("#")
+
+        holder.view.textView_title.text = "${df.format(value)}°C"
         holder.view.textView_text.text = weather.main.humidity + "%"
 
 

@@ -9,6 +9,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.mciekurs.materialdesign.MainActivity
 import com.mciekurs.materialdesign.R
+import com.mciekurs.materialdesign.TodayJson
 
 class FragmentDetail: Fragment(){
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
@@ -18,7 +19,7 @@ class FragmentDetail: Fragment(){
         rw.layoutManager = LinearLayoutManager(activity)
 
         val activity = activity as MainActivity?
-        activity!!.getJson(rw)
+        activity!!.getJsonWeekly(rw, "forecast")
 
         return rootView
     }

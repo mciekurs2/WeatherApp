@@ -4,5 +4,7 @@
     <!--MainView-->
     <string name="infoTitle">Title</string>
     <string name="infoText">Text</string>
+    <string name="temp">Temp</string>
+    <string name="weatherName">name</string>
 
 </resources>
